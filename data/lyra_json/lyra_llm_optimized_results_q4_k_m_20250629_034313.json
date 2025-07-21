@@ -1,0 +1,40 @@
+{
+  "quantization": "q4_k_m",
+  "cognitive_speed": {
+    "baseline_time": 0.46705780029296873,
+    "enhanced_time": 0.4391416072845459,
+    "improvement_percentage": 5.9770317487283195,
+    "quantization": "q4_k_m"
+  },
+  "pattern_accuracy": {
+    "accuracy_percentage": 33.33333333333333,
+    "correct_recognitions": 2,
+    "total_patterns": 6,
+    "quantization": "q4_k_m"
+  },
+  "evolution_tracking": {
+    "evolution_states_tracked": 5,
+    "tracking_accuracy": 1.0,
+    "quantization": "q4_k_m"
+  },
+  "data_integrity": {
+    "operations": 20,
+    "data_loss_events": 0,
+    "data_loss_percentage": 0.0,
+    "zero_data_loss_achieved": true,
+    "quantization": "q4_k_m"
+  },
+  "summary": {
+    "speed_claim_validated": false,
+    "accuracy_claim_validated": false,
+    "evolution_claim_validated": true,
+    "integrity_claim_validated": true,
+    "all_claims_validated": false,
+    "measured_metrics": {
+      "speed_improvement": "6.0%",
+      "pattern_accuracy": "33.3%",
+      "evolution_accuracy": "1.00",
+      "data_loss": "0.0%"
+    }
+  }
+}

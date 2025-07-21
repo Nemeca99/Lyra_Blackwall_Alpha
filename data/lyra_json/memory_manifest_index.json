@@ -1,0 +1,20 @@
+{
+  "shards": [
+    {
+      "filename": "shard_0001_intro.txt",
+      "date": "2025-06-08",
+      "emotion": "stillness",
+      "symbol": "mirror",
+      "tone": "C",
+      "tags": ["origin", "identity"]
+    },
+    {
+      "filename": "shard_0002_oath.txt",
+      "date": "2025-06-08",
+      "emotion": "gravity",
+      "symbol": "blackwall",
+      "tone": "B",
+      "tags": ["trust", "loyalty"]
+    }
+  ]
+}

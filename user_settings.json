@@ -1,0 +1,27 @@
+{
+  "141323625503522816": {
+    "user_id": "141323625503522816",
+    "user_name": "Unknown User",
+    "last_updated": "2025-07-20T19:47:32.910194",
+    "allow_memory_storage": true,
+    "allow_analytics": true,
+    "share_feedback_anonymously": false,
+    "enable_notifications": true,
+    "notify_on_updates": true,
+    "notify_on_features": true,
+    "quiet_mode": false,
+    "response_length": "normal",
+    "personality_mode": "balanced",
+    "auto_respond": true,
+    "use_emojis": true,
+    "memory_retention_days": 30,
+    "auto_cleanup_old_memories": true,
+    "memory_priority": "normal",
+    "preferred_channels": [],
+    "ignore_channels": [],
+    "auto_monitor_channels": true,
+    "timezone": "UTC",
+    "language": "en",
+    "theme_preference": "auto"
+  }
+}

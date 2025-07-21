@@ -1,0 +1,8 @@
+{
+  "voice_enabled": true,
+  "wake_word": "echoe",
+  "wake_required": true,
+  "silent_hours": [],
+  "emotion_display": true,
+  "presence_visible": true
+}

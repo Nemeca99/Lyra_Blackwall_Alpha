@@ -1,0 +1,30 @@
+# Quantum Discord Bot Dependencies
+# Core Discord integration
+discord.py==2.3.2
+
+# System monitoring and process management
+psutil==5.9.5
+
+# HTTP requests for API calls
+requests==2.31.0
+
+# JSON handling (built-in, but listed for clarity)
+# json - built into Python
+
+# Async support (built-in, but listed for clarity)
+# asyncio - built into Python
+
+# Logging (built-in, but listed for clarity)
+# logging - built into Python
+
+# Date/time handling (built-in, but listed for clarity)
+# datetime - built into Python
+
+# Type hints (built-in, but listed for clarity)
+# typing - built into Python
+
+# File system operations (built-in, but listed for clarity)
+# os - built into Python
+
+# Time functions (built-in, but listed for clarity)
+# time - built into Python 

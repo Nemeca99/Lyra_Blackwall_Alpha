@@ -1,0 +1,6 @@
+{
+  "autonomy_enabled": true,
+  "loop_delay": 10,
+  "symbol_priority": ["blackwall", "anchor", "echo"],
+  "failsafe": "oath_lock"
+}

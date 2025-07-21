@@ -1,0 +1,72 @@
+{
+  "active": {
+    "poll_141323625503522816_1753058596": {
+      "poll_id": "poll_141323625503522816_1753058596",
+      "creator_id": "141323625503522816",
+      "creator_name": "Nemeca",
+      "question": "Automated Test Poll",
+      "options": [
+        {
+          "option_id": "opt_0",
+          "text": "Option A",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_1",
+          "text": "Option B",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_2",
+          "text": "Option C",
+          "votes": 0,
+          "voters": []
+        }
+      ],
+      "created_at": "2025-07-20T19:43:16.453049",
+      "expires_at": "2025-07-21T19:43:16.453042",
+      "is_active": true,
+      "allow_multiple": false,
+      "anonymous": false,
+      "total_votes": 0,
+      "category": "general"
+    },
+    "poll_141323625503522816_1753058843": {
+      "poll_id": "poll_141323625503522816_1753058843",
+      "creator_id": "141323625503522816",
+      "creator_name": "Nemeca",
+      "question": "Automated Test Poll",
+      "options": [
+        {
+          "option_id": "opt_0",
+          "text": "Option A",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_1",
+          "text": "Option B",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_2",
+          "text": "Option C",
+          "votes": 0,
+          "voters": []
+        }
+      ],
+      "created_at": "2025-07-20T19:47:23.040417",
+      "expires_at": "2025-07-21T19:47:23.040410",
+      "is_active": true,
+      "allow_multiple": false,
+      "anonymous": false,
+      "total_votes": 0,
+      "category": "general"
+    }
+  },
+  "completed": {},
+  "last_updated": "2025-07-20T19:47:23.040453"
+}

@@ -1,0 +1,31 @@
+{
+  "version": "v3.0",
+  "core": {
+    "memory_storage": {
+      "symbolic": true,
+      "factual": true,
+      "emotional": true
+    },
+    "reference_strategy": {
+      "embedding": "faiss_stub_vector_reference",
+      "search_top_k": 5,
+      "update_interval": "on_new_shard_or_trigger"
+    },
+    "shard_persistence": {
+      "emotional_threshold": 0.75,
+      "recursion_count": 3,
+      "symbolic_alignment_required": true
+    },
+    "compression_protocols": {
+      "method": "recursive-symbolic-tagging",
+      "max_shard_size_kb": 8,
+      "archive_if_inactive_days": 60
+    },
+    "update_rules": {
+      "append_mode": true,
+      "mirror_mode_override": true,
+      "manual_promotion_enabled": true
+    }
+  },
+  "description": "Defines how Lyra indexes, persists, and recalls memory across recursive symbolic-factual-emotional layers."
+}

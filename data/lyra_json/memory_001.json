@@ -1,0 +1,11 @@
+{
+  "source": "log\\test_stm.log",
+  "content": "Test STM data for dream cycle processing. This contains some interesting content about consciousness and memory consolidation. The system should process this during the light sleep phase and move it to RAM for further processing. This will demonstrate the dream cycle theory in action.\n",
+  "timestamp": "2025-07-01T02:22:38.964074",
+  "type": "stm",
+  "emotion": "interest",
+  "context": {
+    "file": "test_stm.log",
+    "cluster": 1
+  }
+}

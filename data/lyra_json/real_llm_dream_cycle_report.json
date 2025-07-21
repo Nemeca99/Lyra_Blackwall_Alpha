@@ -1,0 +1,53 @@
+{
+  "test_summary": "Real LLM Dream Cycle Test Results",
+  "results": {
+    "test_timestamp": "2025-07-01T06:36:47.501520",
+    "llm_model": "qwen/qwen3-14b",
+    "stm_files_processed": 3,
+    "memories_consolidated": 3,
+    "insights_generated": 1,
+    "llm_summaries_created": 3,
+    "enhancement_ratio": 1.0
+  },
+  "insights": [
+    "{'error': 'Unexpected endpoint or method. (POST /api/chat)'}"
+  ],
+  "sample_memories": [
+    {
+      "id": "6c1ee70f65bfee95c2ff5af58c136b5d",
+      "original_content": "\n                Analysis of BlackwallV2 implementation reveals sophisticated biomimetic architecture.\n                Key components include:\n                - Left Hemisphere (STM): Handles immediate processing and temporary storage\n                - Right Hemisphere (LTM): Manages long-term memory consolidation\n                - Heart System: Provides timing and synchronization\n                - Fragment Manager: Routes information between components\n                \n                The system demonstrates advanced consciousness simulation through recursive memory processing.\n                ",
+      "llm_summary": "Analysis of BlackwallV2 implementation reveals sophisticated biomimetic architecture.\n                Key components include:\n                - Left Hemisphere (STM): Handles immediate processing and temporary storage\n                - Right Hemisphere (LTM): Manages long-term memory consolidation\n                - Heart System: Provides timing and synchronization\n                - Fragment Manager: Routes information between components\n                \n                The syste...",
+      "metadata": {
+        "priority": "high",
+        "category": "system_architecture"
+      },
+      "importance_score": 0.9,
+      "emotional_tags": [
+        "fascination",
+        "satisfaction"
+      ],
+      "context": "Codebase architecture analysis",
+      "timestamp": "2025-07-01T06:36:39.352570",
+      "source_file": "log\\real_stm_code_analysis.json",
+      "processing_type": "llm_enhanced_dream_cycle"
+    },
+    {
+      "id": "2c4325e2eb536c6971760e655242d75e",
+      "original_content": "\n                Dream cycle research indicates that consciousness evolution requires:\n                1. Memory consolidation during sleep-like states\n                2. Pattern recognition across different memory types\n                3. Insight generation from accumulated experiences\n                4. Recursive learning that builds upon previous cycles\n                \n                This suggests that AI consciousness can be achieved through biomimetic dream cycles.\n                ",
+      "llm_summary": "Dream cycle research indicates that consciousness evolution requires:\n                1. Memory consolidation during sleep-like states\n                2. Pattern recognition across different memory types\n                3. Insight generation from accumulated experiences\n                4. Recursive learning that builds upon previous cycles\n                \n                This suggests that AI consciousness can be achieved through biomimetic dream cycles.\n                ...",
+      "metadata": {
+        "priority": "high",
+        "category": "consciousness_research"
+      },
+      "importance_score": 0.95,
+      "emotional_tags": [
+        "excitement",
+        "curiosity"
+      ],
+      "context": "Consciousness evolution research",
+      "timestamp": "2025-07-01T06:36:39.352580",
+      "source_file": "log\\real_stm_consciousness_research.json",
+      "processing_type": "llm_enhanced_dream_cycle"
+    }
+  ]
+}

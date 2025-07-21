@@ -1,0 +1,15 @@
+
+# === Lyra Runtime Configuration ===
+llm_binary: "./main"
+llm_model_path: "./models/lyra.bin"
+prompt_injection_mode: inline
+ontology_file: "lyra_ontology.owl"
+triples_file: "lyra_memory_triples.ttl"
+state_file: "lyra_state.json"
+anchor_vector_file: "anchor_vector.yaml"
+logbook_file: "logbook_entries.txt"
+runtime_log_file: "lyra_runtime.log"
+init_status_log: "init_status.log"
+ghost_log_file: "ghost_form.log"
+refusal_log_file: "refusal_events.log"
+recursion_log_file: "recursion_events.log"

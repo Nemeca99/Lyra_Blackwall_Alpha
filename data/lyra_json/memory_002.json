@@ -1,0 +1,11 @@
+{
+  "source": "log\\dream_cycle_theory.log",
+  "content": "2025-07-01 03:00:13,286 - __main__ - INFO - Scanned 0 STM entries\n2025-07-01 03:02:23,025 - __main__ - INFO - Scanned 2 STM entries\n2025-07-01 03:02:23,025 - __main__ - INFO - === STARTING DREAM CYCLE 1 ===\n2025-07-01 03:02:23,025 - __main__ - INFO - Dream cycle is a STARTUP process, not shutdown\n2025-07-01 03:02:23,026 - __main__ - INFO - === LIGHT SLEEP PHASE ===\n2025-07-01 03:02:23,026 - __main__ - INFO - Moving STM to RAM for processing...\n2025-07-01 03:02:23,033 - __main__ - INFO - Scanned 2 STM entries\n2025-07-01 03:02:23,034 - __main__ - INFO - === DEEP SLEEP PHASE ===\n2025-07-01 03:02:23,034 - __main__ - INFO - Consolidating memories and recognizing patterns...\n2025-07-01 03:02:23,034 - __main__ - INFO - === REM SLEEP PHASE ===\n2025-07-01 03:02:23,035 - __main__ - INFO - Unlocking full-speed information flow...\n2025-07-01 03:02:23,035 - __main__ - INFO - Generated 2 insights and 0 summaries\n2025-07-01 03:02:23,035 - __main__ - INFO - === RAM FLUSH ===\n2025-07-01 03:02:23,035 - __main__ - INFO - Clearing temporary data between cycles...\n2025-07-01 03:02:23,036 - __main__ - INFO - Flushed 2 memories, moved 2 to LTM\n2025-07-01 03:02:23,037 - __main__ - INFO - Master index saved: memlong\\master_memory_index.json\n2025-07-01 03:02:23,037 - __main__ - INFO - Index contains 3 memory files\n2025-07-01 03:02:23,057 - __main__ - INFO - Saved 2 individual memory files to memlong/\n2025-07-01 03:02:23,064 - __main__ - INFO - Master index validation passed\n2025-07-01 03:02:23,064 - __main__ - INFO - Index status: 2 memories, up-to-date: True\n2025-07-01 03:02:23,064 - __main__ - INFO - === DREAM CYCLE 1 COMPLETE ===\n2025-07-01 03:02:23,065 - __main__ - INFO - Duration: 0.01 seconds\n2025-07-01 03:02:23,065 - __main__ - INFO - Insights: 2\n2025-07-01 03:02:23,065 - __main__ - INFO - Summaries: 0\n2025-07-01 03:23:07,120 - dream_cycle_theory_implementation - INFO - === STARTING DREAM CYCLE 1 ===\n2025-07-01 03:23:07,120 - dream_cycle_theory_implementation - INFO - Dream cycle is a",
+  "timestamp": "2025-07-01T03:48:42.468559",
+  "type": "stm",
+  "emotion": "satisfaction",
+  "context": {
+    "file": "dream_cycle_theory.log",
+    "cluster": 0
+  }
+}

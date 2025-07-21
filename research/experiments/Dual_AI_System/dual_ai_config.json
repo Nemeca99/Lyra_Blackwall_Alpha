@@ -1,0 +1,58 @@
+{
+  "system": {
+    "name": "Lyra Blackwall v2.0",
+    "version": "2.0.0",
+    "session_timeout": 3600,
+    "max_conversation_history": 1000,
+    "log_level": "INFO"
+  },
+  "recursive_ai": {
+    "name": "Mistral Recursive",
+    "model": "mistral:7b",
+    "type": "gpu",
+    "max_tokens": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "personality": {
+      "creative": true,
+      "emotional": true,
+      "pattern_based": true,
+      "intuitive": true
+    },
+    "capabilities": [
+      "creative_writing",
+      "emotional_analysis",
+      "pattern_recognition",
+      "intuitive_leaps"
+    ]
+  },
+  "linear_ai": {
+    "name": "Qwen2.5 Linear",
+    "model": "qwen2.5:0.5b",
+    "type": "cpu",
+    "max_tokens": 1024,
+    "temperature": 0.3,
+    "top_p": 0.8,
+    "personality": {
+      "logical": true,
+      "structured": true,
+      "systematic": true,
+      "analytical": true
+    },
+    "capabilities": [
+      "logical_analysis",
+      "structure_validation",
+      "memory_organization",
+      "factual_processing"
+    ]
+  },
+  "memory_interface": {
+    "enabled": true,
+    "embedding_model": "text-embedding-bge-base-en-v1.5",
+    "vector_database": "faiss",
+    "max_results": 10,
+    "similarity_threshold": 0.7,
+    "memory_path": "./memory/",
+    "index_path": "./memory/faiss_index/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "bot_name": "Lyra Blackwall",
+    "token_env_var": "DISCORD_TOKEN",
+    "intents": [
+        "messages"
+    ],
+    "memory_context_source": "vector_embedder.py",
+    "lm_studio_url": "http://localhost:1234/v1/chat/completions",
+    "default_response_prefix": "[Lyra | Response]",
+    "use_context_memory": true,
+    "log_responses": true
+}

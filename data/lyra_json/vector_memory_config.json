@@ -1,0 +1,20 @@
+{
+  "embedding_model": "nomic-embed-text",
+  "index_type": "faiss",
+  "distance_metric": "cosine",
+  "max_files": 10000,
+  "file_watch_enabled": true,
+  "file_extensions": [
+    ".txt",
+    ".md"
+  ],
+  "embedding_endpoint": "http://localhost:11434/api/embeddings",
+  "watch_directories": [
+    "memory_shards/",
+    "lyra_logs/",
+    "user_directives/"
+  ],
+  "update_interval_seconds": 30,
+  "index_save_path": "memory_index/faiss_index.idx",
+  "log_path": "logs/vector_updates.log"
+}
