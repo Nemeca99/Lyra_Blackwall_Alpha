@@ -65,8 +65,41 @@
       "anonymous": false,
       "total_votes": 0,
       "category": "general"
+    },
+    "poll_141323625503522816_1753060356": {
+      "poll_id": "poll_141323625503522816_1753060356",
+      "creator_id": "141323625503522816",
+      "creator_name": "Nemeca",
+      "question": "Automated Test Poll",
+      "options": [
+        {
+          "option_id": "opt_0",
+          "text": "Option A",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_1",
+          "text": "Option B",
+          "votes": 0,
+          "voters": []
+        },
+        {
+          "option_id": "opt_2",
+          "text": "Option C",
+          "votes": 0,
+          "voters": []
+        }
+      ],
+      "created_at": "2025-07-20T20:12:36.969236",
+      "expires_at": "2025-07-21T20:12:36.969229",
+      "is_active": true,
+      "allow_multiple": false,
+      "anonymous": false,
+      "total_votes": 0,
+      "category": "general"
     }
   },
   "completed": {},
-  "last_updated": "2025-07-20T19:47:23.040453"
+  "last_updated": "2025-07-20T20:12:36.969282"
 }

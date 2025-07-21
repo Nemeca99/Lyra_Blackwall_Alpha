@@ -118,7 +118,7 @@ class QuantumChef:
             "successful_collapses": 0,
         }
 
-        logger.info("👨‍🍳 Quantum Chef initialized as Observer")
+        logger.info("Quantum Chef initialized as Observer")
 
     async def observe_and_collapse(self, order: QuantumOrder) -> CollapsedResponse:
         """
@@ -126,11 +126,11 @@ class QuantumChef:
         This is the core quantum collapse mechanism
         """
         logger.info(
-            f"🔬 Chef begins observation of superposition {order.superposition_id}"
+            f"Chef begins observation of superposition {order.superposition_id}"
         )
 
         # Step 1: Process personality and emotional state
-        logger.info(f"🧠 Processing personality and emotional weights")
+        logger.info(f"Processing personality and emotional weights")
         emotional_state = personality_engine.process_input(order.user_id, order.message)
 
         # Step 2: Initialize superposition state
@@ -144,15 +144,15 @@ class QuantumChef:
         }
 
         # Step 3: Chef consults with Particle (LM Studio) with personality
-        logger.info(f"⚛️ Chef observes Particle position (LM Studio)")
+        logger.info(f"Chef observes Particle position (LM Studio)")
         particle_state = await self.observe_particle_position(order, emotional_state)
 
         # Step 4: Chef consults with Wave (Ollama)
-        logger.info(f"🌊 Chef observes Wave position (Ollama)")
+        logger.info(f"Chef observes Wave position (Ollama)")
         wave_state = await self.observe_wave_position(order)
 
         # Step 5: Chef collapses superposition
-        logger.info(f"💥 Chef collapses superposition into single response")
+        logger.info(f"Chef collapses superposition into single response")
         collapsed_response = await self.collapse_superposition(
             order, particle_state, wave_state, emotional_state
         )
@@ -160,7 +160,7 @@ class QuantumChef:
         # Step 6: Update observer metrics
         self.update_observer_metrics(order.superposition_id)
 
-        logger.info(f"✅ Superposition {order.superposition_id} collapsed successfully")
+        logger.info(f"Superposition {order.superposition_id} collapsed successfully")
         return collapsed_response
 
     async def observe_particle_position(
@@ -396,6 +396,20 @@ class QuantumChef:
         """
         # Get the creative response from particle state
         creative_response = particle_state.creative_response
+        
+        # Clean up the response - remove any XML tags or formatting
+        if "<think>" in creative_response:
+            # Remove the thinking section
+            start_idx = creative_response.find("</think>")
+            if start_idx != -1:
+                creative_response = creative_response[start_idx + 8:].strip()
+        
+        # Remove any remaining XML-like tags
+        import re
+        creative_response = re.sub(r'<[^>]+>', '', creative_response)
+        
+        # Clean up extra whitespace
+        creative_response = re.sub(r'\n\s*\n', '\n\n', creative_response).strip()
 
         # Enhance with context from wave state
         if wave_state.context_summary:
@@ -454,16 +468,32 @@ class QuantumChef:
         user_context = memory_system.get_full_context(user_id)
 
         # Create profile-based prompt like roleplay bot
-        if profile:
-            # Extract key profile information
-            basic_info = profile.get("basic_information", {})
-            cognitive_profile = profile.get("cognitive_profile", {})
-            communication_guidelines = profile.get("communication_guidelines", {})
-            relationship_to_ai = profile.get("relationship_to_ai", {})
+        if profile and isinstance(profile, dict):
+            # Extract key profile information with safe defaults
+            basic_info = (
+                profile.get("basic_information", {})
+                if isinstance(profile.get("basic_information"), dict)
+                else {}
+            )
+            cognitive_profile = (
+                profile.get("cognitive_profile", {})
+                if isinstance(profile.get("cognitive_profile"), dict)
+                else {}
+            )
+            communication_guidelines = (
+                profile.get("communication_guidelines", {})
+                if isinstance(profile.get("communication_guidelines"), dict)
+                else {}
+            )
+            relationship_to_ai = (
+                profile.get("relationship_to_ai", {})
+                if isinstance(profile.get("relationship_to_ai"), dict)
+                else {}
+            )
 
             # Get memory context lines for fast reference
-            memory_context = profile.get("memory_context_index", {})
-            context_lines = memory_context.get("context_lines", [])
+            memory_context = profile.get("memory_context_index", {}) if isinstance(profile.get("memory_context_index"), dict) else {}
+            context_lines = memory_context.get("context_lines", []) if isinstance(memory_context.get("context_lines"), list) else []
 
             # Create memory timeline like roleplay bot
             memory_timeline = ""

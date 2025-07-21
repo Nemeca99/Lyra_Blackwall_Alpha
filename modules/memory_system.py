@@ -36,7 +36,7 @@ class MemorySystem:
         # Load all memory files
         self._load_memory_files()
 
-        print("🧠 Memory System initialized")
+        print("Memory System initialized")
 
     def _load_memory_files(self):
         """Load all memory files from the memory directory"""

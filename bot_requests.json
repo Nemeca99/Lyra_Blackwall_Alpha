@@ -24,5 +24,18 @@
     "complexity": "easy",
     "estimated_time": "30-45 minutes",
     "admin_notes": ""
+  },
+  "request_141323625503522816_1753060361": {
+    "request_id": "request_141323625503522816_1753060361",
+    "user_id": "141323625503522816",
+    "user_name": "Nemeca",
+    "feature_type": "reactions",
+    "description": "Automated test feature request",
+    "created_at": "2025-07-20T20:12:41.753999",
+    "status": "pending",
+    "priority": "normal",
+    "complexity": "easy",
+    "estimated_time": "30-45 minutes",
+    "admin_notes": ""
   }
 }

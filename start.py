@@ -16,18 +16,18 @@ if __name__ == "__main__":
     # Import the main bot function
     from core.quantum_discord_bot import main
 
-    print("🚀 **STARTING QUANTUM DISCORD BOT**")
+    print("**STARTING QUANTUM DISCORD BOT**")
     print("=" * 50)
-    print("🎯 Production-ready bot with all Phase 3 features")
-    print("⚡ AI Queue System integrated")
-    print("🔧 All systems initialized")
-    print("📁 Running from:", current_dir)
+    print("Production-ready bot with all Phase 3 features")
+    print("AI Queue System integrated")
+    print("All systems initialized")
+    print("Running from:", current_dir)
     print("=" * 50)
 
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
-        print("\n🛑 Bot shutdown requested")
+        print("\nBot shutdown requested")
     except Exception as e:
-        print(f"❌ Error starting bot: {e}")
+        print(f"Error starting bot: {e}")
         sys.exit(1)

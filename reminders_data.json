@@ -27,8 +27,22 @@
       "is_completed": false,
       "completed_at": "",
       "priority": "normal"
+    },
+    "reminder_141323625503522816_1753060357": {
+      "reminder_id": "reminder_141323625503522816_1753060357",
+      "user_id": "141323625503522816",
+      "user_name": "Nemeca",
+      "channel_id": "1396580651699933205",
+      "message": "Automated test reminder",
+      "created_at": "2025-07-20T20:12:37.134035",
+      "due_time": "2025-07-20T21:12:37.133950",
+      "is_recurring": false,
+      "recurrence_pattern": "",
+      "is_completed": false,
+      "completed_at": "",
+      "priority": "normal"
     }
   },
   "completed": {},
-  "last_updated": "2025-07-20T19:47:23.192076"
+  "last_updated": "2025-07-20T20:12:37.134059"
 }

@@ -34,6 +34,8 @@ from modules.user_settings import SettingsManager
 from modules.greeter_system import GreeterSystem
 from modules.privacy_manager import PrivacyManager
 from modules.dynamic_channel_manager import DynamicChannelManager
+from modules.memory_system import MemorySystem
+from modules.quantum_kitchen import quantum_chef, QuantumOrder
 
 # Import configuration
 from .config import BotConfig
@@ -120,7 +122,15 @@ class QuantumDiscordBot(commands.Bot):
             self.channel_manager = DynamicChannelManager()
             logger.info("✅ Dynamic Channel Manager initialized")
 
-            logger.info("✅ All 13 core systems initialized successfully!")
+            # Initialize memory system
+            self.memory_system = MemorySystem()
+            logger.info("✅ Memory System initialized")
+
+            # Initialize quantum kitchen
+            self.quantum_kitchen = quantum_chef
+            logger.info("✅ Quantum Kitchen initialized")
+
+            logger.info("✅ All 15 core systems initialized successfully!")
 
         except Exception as e:
             logger.error(f"❌ System initialization failed: {e}")
@@ -161,6 +171,86 @@ class QuantumDiscordBot(commands.Bot):
 
         logger.info("🎭 **QUANTUM BOT READY FOR PRODUCTION**")
         logger.info("=" * 60)
+
+    async def on_message(self, message):
+        """Handle incoming messages"""
+        # Ignore messages from the bot itself
+        if message.author == self.user:
+            return
+
+        # Process commands first
+        await self.process_commands(message)
+
+        # Handle regular messages (non-commands)
+        if not message.content.startswith(self.command_prefix):
+            # Get user info
+            user_id = str(message.author.id)
+            user_name = message.author.display_name
+
+            # Try to get AI response first
+            try:
+                # Create quantum order
+                from modules.quantum_kitchen import QuantumOrder
+                order = QuantumOrder(
+                    user_id=user_id,
+                    message=message.content
+                )
+                
+                # Get AI response using quantum kitchen
+                collapsed_response = await self.quantum_kitchen.observe_and_collapse(order)
+                ai_response = collapsed_response.response_content
+                await message.channel.send(ai_response)  # RESTART TRIGGER
+            except Exception as e:
+                logger.error(f"AI response failed: {e}")
+                # Fallback to simple response
+                response = self.generate_simple_response(user_name, message.content)
+                await message.channel.send(response)
+
+            # Try to add to memory (but don't fail if it doesn't work)
+            try:
+                self.memory_system.add_user_memory(
+                    user_id=user_id,
+                    content=message.content,
+                    memory_type="message",
+                    metadata={
+                        "user_name": user_name,
+                        "channel_id": str(message.channel.id),
+                        "message_id": str(message.id),
+                    },
+                )
+            except Exception as e:
+                logger.warning(f"Memory system error (non-critical): {e}")
+
+    def generate_simple_response(self, user_name: str, message: str) -> str:
+        """Generate a simple but intelligent response"""
+        message_lower = message.lower()
+
+        # Greeting responses
+        if any(word in message_lower for word in ["hello", "hi", "hey", "how are you"]):
+            return f"Hello {user_name}! I'm doing well, thank you for asking. How are you today?"
+
+        # Question responses
+        if "?" in message:
+            if "who" in message_lower:
+                return f"I'm Lyra Blackwall, a quantum AI assistant. Nice to meet you, {user_name}!"
+            elif "what" in message_lower:
+                return f"I'm here to help you with whatever you need, {user_name}. What can I assist you with?"
+            elif "how" in message_lower:
+                return f"I'm functioning well, {user_name}! How can I help you today?"
+            else:
+                return f"That's an interesting question, {user_name}. I'd be happy to help you explore that topic."
+
+        # Statement responses
+        if any(
+            word in message_lower for word in ["good", "great", "awesome", "excellent"]
+        ):
+            return f"That's wonderful to hear, {user_name}! I'm glad things are going well for you."
+
+        if any(word in message_lower for word in ["bad", "terrible", "awful", "sad"]):
+            return f"I'm sorry to hear that, {user_name}. Is there anything I can do to help?"
+
+        # Default response
+        return f"Thank you for your message, {user_name}. I'm Lyra Blackwall, and I'm here to assist you. What would you like to work on today?"
 
 
 class FeedbackCommands(commands.Cog):

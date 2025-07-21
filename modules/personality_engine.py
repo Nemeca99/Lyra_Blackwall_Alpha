@@ -87,7 +87,7 @@ class PersonalityEngine:
         # Fusion rules
         self.fusion_rules = self._initialize_fusion_rules()
 
-        print("🧠 Dynamic Personality Engine initialized")
+        print("Dynamic Personality Engine initialized")
 
     def _initialize_fragments(self) -> Dict[str, FragmentProfile]:
         """Initialize the 6 personality fragments with their emotional profiles"""
