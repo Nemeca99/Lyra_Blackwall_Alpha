@@ -57,7 +57,9 @@ data/analytics/*.json
 
 # Configuration (keep example but ignore actual config)
 core/config.py
+config.py
 !core/config.example.py
+!config.example.py
 
 # Discord bot token
 .env

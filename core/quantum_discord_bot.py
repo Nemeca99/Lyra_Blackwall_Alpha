@@ -191,15 +191,40 @@ class QuantumDiscordBot(commands.Bot):
             try:
                 # Create quantum order
                 from modules.quantum_kitchen import QuantumOrder
-                order = QuantumOrder(
-                    user_id=user_id,
-                    message=message.content
-                )
-                
+
+                order = QuantumOrder(user_id=user_id, message=message.content)
+
                 # Get AI response using quantum kitchen
-                collapsed_response = await self.quantum_kitchen.observe_and_collapse(order)
+                collapsed_response = await self.quantum_kitchen.observe_and_collapse(
+                    order
+                )
                 ai_response = collapsed_response.response_content
-                await message.channel.send(ai_response)  # RESTART TRIGGER
+
+                # Split long responses into multiple messages (2000 char limit)
+                if len(ai_response) > 1900:  # Leave some buffer
+                    # Split into chunks
+                    chunks = []
+                    current_chunk = ""
+
+                    for line in ai_response.split("\n"):
+                        if len(current_chunk + line + "\n") > 1900:
+                            if current_chunk:
+                                chunks.append(current_chunk.strip())
+                            current_chunk = line + "\n"
+                        else:
+                            current_chunk += line + "\n"
+
+                    if current_chunk:
+                        chunks.append(current_chunk.strip())
+
+                    # Send chunks with continuation indicators
+                    for i, chunk in enumerate(chunks):
+                        if i == 0:
+                            await message.channel.send(chunk)
+                        else:
+                            await message.channel.send(f"*[Continued...]*\n{chunk}")
+                else:
+                    await message.channel.send(ai_response)
             except Exception as e:
                 logger.error(f"AI response failed: {e}")
                 # Fallback to simple response

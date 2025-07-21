@@ -1,6 +1,8 @@
 """
-Configuration example for Quantum Discord Bot
-Copy this file to config.py and fill in your actual values
+Configuration file for Quantum Discord Bot
+Easy customization of bot settings and behavior
+
+COPY THIS FILE TO config.py AND ADD YOUR ACTUAL TOKENS
 """
 
 import os
@@ -12,8 +14,11 @@ class BotConfig:
 
     def __init__(self):
         # Discord Bot Configuration
-        self.DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
-        if not self.DISCORD_BOT_TOKEN:
+        self.DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+        if (
+            not self.DISCORD_BOT_TOKEN
+            or self.DISCORD_BOT_TOKEN == "YOUR_BOT_TOKEN_HERE"
+        ):
             raise ValueError("DISCORD_BOT_TOKEN environment variable is required")
 
         self.TARGET_CHANNEL_ID = int(
@@ -98,33 +103,23 @@ class BotConfig:
                 "log_to_file": self.LOG_TO_FILE,
                 "log_file": self.LOG_FILE,
             },
-            "status": {
-                "bot_status": self.BOT_STATUS,
+            "bot_status": {
+                "status": self.BOT_STATUS,
                 "activity_type": self.BOT_ACTIVITY_TYPE,
             },
         }
 
     def print_config(self):
-        """Print current configuration"""
-        print("🔧 **QUANTUM BOT CONFIGURATION**")
-        print("=" * 50)
+        """Print current configuration (safe version)"""
         config = self.get_all_config()
+        print("🤖 Quantum Discord Bot Configuration:")
+        print("=" * 50)
         for section, settings in config.items():
-            print(f"\n📁 {section.upper()}:")
+            print(f"\n📋 {section.upper()}:")
             for key, value in settings.items():
                 print(f"  {key}: {value}")
-        print("=" * 50)
+        print("\n" + "=" * 50)
 
 
-if __name__ == "__main__":
-    # Example usage
-    try:
-        config = BotConfig()
-        config.print_config()
-    except ValueError as e:
-        print(f"❌ Configuration Error: {e}")
-        print("\n📝 Setup Instructions:")
-        print("1. Set DISCORD_BOT_TOKEN environment variable")
-        print("2. Set TARGET_CHANNEL_ID environment variable (optional)")
-        print("3. Copy this file to config.py")
-        print("4. Run the bot with: python start.py") 
+# Global config instance
+config = BotConfig()

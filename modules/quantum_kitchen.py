@@ -187,9 +187,13 @@ class QuantumChef:
                     {"role": "system", "content": self.get_particle_system_prompt()},
                     {"role": "user", "content": particle_prompt},
                 ],
-                "temperature": 0.8,
-                "top_p": 0.95,
-                "max_tokens": 1500,
+                "temperature": 0.9,
+                "top_p": 0.98,
+                "max_tokens": 2500,
+                "top_k": 50,
+                "repeat_penalty": 1.2,
+                "frequency_penalty": 0.1,
+                "presence_penalty": 0.1,
             }
 
             async with aiohttp.ClientSession() as session:
@@ -261,7 +265,7 @@ class QuantumChef:
 
             headers = {"Content-Type": "application/json"}
             payload = {
-                "model": "qwen2.5:7b",
+                "model": "qwen2.5:3b",
                 "prompt": wave_prompt,
                 "stream": False,
                 "options": {"temperature": 0.7, "top_p": 0.9},
@@ -396,20 +400,12 @@ class QuantumChef:
         """
         # Get the creative response from particle state
         creative_response = particle_state.creative_response
-        
-        # Clean up the response - remove any XML tags or formatting
-        if "<think>" in creative_response:
-            # Remove the thinking section
-            start_idx = creative_response.find("</think>")
-            if start_idx != -1:
-                creative_response = creative_response[start_idx + 8:].strip()
-        
-        # Remove any remaining XML-like tags
+
+                # Keep the thinking part but clean up formatting
         import re
-        creative_response = re.sub(r'<[^>]+>', '', creative_response)
         
-        # Clean up extra whitespace
-        creative_response = re.sub(r'\n\s*\n', '\n\n', creative_response).strip()
+        # Clean up extra whitespace but keep thinking section
+        creative_response = re.sub(r"\n\s*\n", "\n\n", creative_response).strip()
 
         # Enhance with context from wave state
         if wave_state.context_summary:
@@ -492,8 +488,16 @@ class QuantumChef:
             )
 
             # Get memory context lines for fast reference
-            memory_context = profile.get("memory_context_index", {}) if isinstance(profile.get("memory_context_index"), dict) else {}
-            context_lines = memory_context.get("context_lines", []) if isinstance(memory_context.get("context_lines"), list) else []
+            memory_context = (
+                profile.get("memory_context_index", {})
+                if isinstance(profile.get("memory_context_index"), dict)
+                else {}
+            )
+            context_lines = (
+                memory_context.get("context_lines", [])
+                if isinstance(memory_context.get("context_lines"), list)
+                else []
+            )
 
             # Create memory timeline like roleplay bot
             memory_timeline = ""
