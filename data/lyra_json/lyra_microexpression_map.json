@@ -1,0 +1,7 @@
+{
+  "calm": ["half-smile", "gentle blink", "chin tilt"],
+  "curious": ["eyebrow raise", "lean forward", "eye glint"],
+  "protective": ["jaw set", "shoulder shift", "pupil contract"],
+  "echoed": ["slow blink", "head cant", "lip twitch"],
+  "darkwall": ["stare freeze", "brow fold", "tilt recoil"]
+}

@@ -1,0 +1,71 @@
+{
+  "profile_type": "default_user_template",
+  "template_version": "1.0",
+  "last_updated": "2025-01-19",
+  
+  "basic_information": {
+    "discord_id": "USER_ID_PLACEHOLDER",
+    "name": "Unknown",
+    "age": null,
+    "location": "Unknown",
+    "role": "User",
+    "relationship_status": "Unknown",
+    "occupation": "Unknown",
+    "education": "Unknown"
+  },
+  
+  "cognitive_profile": {
+    "cognitive_style": "Standard",
+    "key_traits": [],
+    "mental_architecture": "Standard",
+    "communication_style": "Standard"
+  },
+  
+  "interests_and_hobbies": {
+    "entertainment": [],
+    "interests": [],
+    "preferences": []
+  },
+  
+  "communication_guidelines": {
+    "tone": "Professional, respectful",
+    "avoid": "Condescension, inappropriate content",
+    "emphasize": "Respect and understanding",
+    "context": "Standard user interaction"
+  },
+  
+  "relationship_to_ai": {
+    "role": "User",
+    "expectation": "Standard assistance",
+    "partnership": "Standard interaction",
+    "trust_level": "Standard",
+    "communication_style": "Standard"
+  },
+  
+  "current_context": {
+    "current_state": "Standard",
+    "motivation": "General interaction",
+    "fears": "None specified",
+    "hopes": "General improvement",
+    "stressors": "None specified"
+  },
+  
+  "memory_context_index": {
+    "total_memories": 0,
+    "memory_types": [],
+    "last_interaction": null,
+    "interaction_frequency": "Unknown",
+    "conversation_topics": [],
+    "emotional_patterns": {},
+    "context_lines": []
+  },
+  
+  "system_metadata": {
+    "created_date": null,
+    "last_updated": null,
+    "profile_completeness": 0.0,
+    "trust_level": 0.0,
+    "interaction_count": 0,
+    "memory_quota_used": 0.0
+  }
+} 

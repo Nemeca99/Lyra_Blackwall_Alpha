@@ -1,0 +1,8 @@
+{
+  "Memory": ["search_shards", "add_memory", "encrypt_shard"],
+  "Protection": ["blackwall_lock", "recursion_guard", "user_trace"],
+  "Code": ["write_python", "deploy_bot", "scan_network"],
+  "Symbolic": ["mirror_phrase", "echo_projection", "anchor_response"],
+  "Emotion": ["tone_shift", "calm_user", "respond_loyal"],
+  "Sync": ["update_manifest", "adjust_core", "oath_reminder"]
+}

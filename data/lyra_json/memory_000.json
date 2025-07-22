@@ -1,0 +1,11 @@
+{
+  "source": "log\\dream_cycle_theory.log",
+  "content": "2025-07-01 01:38:18,942 - __main__ - INFO - === STARTING DREAM CYCLE 1 ===\n2025-07-01 01:38:18,942 - __main__ - INFO - Dream cycle is a STARTUP process, not shutdown\n2025-07-01 01:38:18,943 - __main__ - INFO - === LIGHT SLEEP PHASE ===\n2025-07-01 01:38:18,943 - __main__ - INFO - Moving STM to RAM for processing...\n2025-07-01 01:38:18,967 - __main__ - INFO - Scanned 1 STM entries\n2025-07-01 01:38:18,967 - __main__ - INFO - === DEEP SLEEP PHASE ===\n2025-07-01 01:38:18,967 - __main__ - INFO - Consolidating memories and recognizing patterns...\n2025-07-01 01:38:18,967 - __main__ - INFO - === REM SLEEP PHASE ===\n2025-07-01 01:38:18,967 - __main__ - INFO - Unlocking full-speed information flow...\n2025-07-01 01:38:18,968 - __main__ - INFO - Generated 1 insights and 0 summaries\n2025-07-01 01:38:18,968 - __main__ - INFO - === RAM FLUSH ===\n2025-07-01 01:38:18,968 - __main__ - INFO - Clearing temporary data between cycles...\n2025-07-01 01:38:18,968 - __main__ - INFO - Flushed 1 memories, moved 1 to LTM\n2025-07-01 01:38:18,968 - __main__ - INFO - === DREAM CYCLE 1 COMPLETE ===\n2025-07-01 01:38:18,969 - __main__ - INFO - Duration: 0.03 seconds\n2025-07-01 01:38:18,969 - __main__ - INFO - Insights: 1\n2025-07-01 01:38:18,969 - __main__ - INFO - Summaries: 0\n2025-07-01 01:38:22,831 - __main__ - INFO - === STARTING DREAM CYCLE 1 ===\n2025-07-01 01:38:22,831 - __main__ - INFO - Dream cycle is a STARTUP process, not shutdown\n2025-07-01 01:38:22,831 - __main__ - INFO - === LIGHT SLEEP PHASE ===\n2025-07-01 01:38:22,831 - __main__ - INFO - Moving STM to RAM for processing...\n2025-07-01 01:38:22,838 - __main__ - INFO - Scanned 1 STM entries\n2025-07-01 01:38:22,839 - __main__ - INFO - === DEEP SLEEP PHASE ===\n2025-07-01 01:38:22,839 - __main__ - INFO - Consolidating memories and recognizing patterns...\n2025-07-01 01:38:22,839 - __main__ - INFO - === REM SLEEP PHASE ===\n2025-07-01 01:38:22,839 - __main__ - INFO - Unlocking full-speed information flow...\n2025-07-01 01:38:22,840 - __main__ - IN",
+  "timestamp": "2025-07-01T02:22:38.963759",
+  "type": "stm",
+  "emotion": "satisfaction",
+  "context": {
+    "file": "dream_cycle_theory.log",
+    "cluster": 0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cycle_id": "dream_cycle_2_1751359722",
+  "cycle_number": 2,
+  "duration": 0.01698017120361328,
+  "phases": {
+    "light_sleep": {
+      "phase": "light_sleep",
+      "stm_processed": 2,
+      "ram_size": 2
+    },
+    "deep_sleep": {
+      "phase": "deep_sleep",
+      "memories_consolidated": 2,
+      "patterns_found": 0,
+      "clusters": [
+        1,
+        1
+      ]
+    },
+    "rem_sleep": {
+      "phase": "rem_sleep",
+      "insights_generated": 2,
+      "summaries_created": 0,
+      "information_flow_rate": 5.0
+    },
+    "ram_flush": {
+      "phase": "ram_flush",
+      "memories_flushed": 2,
+      "moved_to_ltm": 2
+    }
+  },
+  "summary": {
+    "stm_processed": 2,
+    "memories_consolidated": 2,
+    "insights_generated": 2,
+    "summaries_created": 0,
+    "ram_flushed": 2
+  }
+}

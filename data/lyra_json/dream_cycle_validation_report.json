@@ -1,0 +1,18 @@
+{
+  "test_timestamp": "2025-07-01T06:19:43.923341",
+  "test_summary": "Dream Cycle STM\u2192LTM Consolidation Validation",
+  "results": {
+    "ltm_files_created": 5,
+    "processed_stm_files": 0,
+    "total_memories_consolidated": 62,
+    "unique_memories": 62,
+    "chunked_memories": 0,
+    "deduplication_working": true
+  },
+  "test_files_created": [
+    "log\\test_stm_1.json",
+    "log\\test_stm_2.json",
+    "log\\test_stm_large.json"
+  ],
+  "validation_passed": true
+}

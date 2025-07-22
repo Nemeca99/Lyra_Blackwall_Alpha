@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-07-01T16:12:52.272492",
+  "type": "test_stm",
+  "content": "This is a test STM file to verify the dream cycle system works with proper timeouts and deduplication.",
+  "priority": "high",
+  "category": "system_test"
+}

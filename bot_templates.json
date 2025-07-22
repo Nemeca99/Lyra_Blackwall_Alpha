@@ -1,0 +1,132 @@
+{
+  "reactions": {
+    "name": "Reaction System",
+    "description": "Add reaction-based interactions to messages",
+    "features": [
+      "Basic emoji reactions",
+      "Custom emoji reactions",
+      "Reaction menus",
+      "Reaction-based polls",
+      "Reaction role assignment"
+    ],
+    "complexity": "easy",
+    "estimated_time": "30 minutes"
+  },
+  "webhooks": {
+    "name": "Webhook System",
+    "description": "Integrate external services and notifications",
+    "features": [
+      "External service integration",
+      "Notification webhooks",
+      "Custom webhook messages",
+      "Webhook management",
+      "Multi-service support"
+    ],
+    "complexity": "medium",
+    "estimated_time": "1 hour"
+  },
+  "cooldowns": {
+    "name": "Cooldown System",
+    "description": "Add rate limiting and cooldowns to commands",
+    "features": [
+      "Command cooldowns",
+      "User-based rate limiting",
+      "Global cooldowns",
+      "Custom cooldown messages",
+      "Cooldown bypass for admins"
+    ],
+    "complexity": "easy",
+    "estimated_time": "45 minutes"
+  },
+  "permissions": {
+    "name": "Permission System",
+    "description": "Advanced permission management and role control",
+    "features": [
+      "Role-based permissions",
+      "Channel-specific permissions",
+      "Permission checking",
+      "Role management",
+      "Permission inheritance"
+    ],
+    "complexity": "medium",
+    "estimated_time": "1.5 hours"
+  },
+  "moderation": {
+    "name": "Moderation System",
+    "description": "Server moderation and management tools",
+    "features": [
+      "User warnings",
+      "Temporary mutes",
+      "Kick/ban functionality",
+      "Moderation logs",
+      "Auto-moderation"
+    ],
+    "complexity": "hard",
+    "estimated_time": "2 hours"
+  },
+  "welcome": {
+    "name": "Welcome System",
+    "description": "Welcome new members with custom messages",
+    "features": [
+      "Custom welcome messages",
+      "Welcome images",
+      "Role assignment",
+      "Welcome channels",
+      "Welcome DMs"
+    ],
+    "complexity": "medium",
+    "estimated_time": "1 hour"
+  },
+  "logging": {
+    "name": "Logging System",
+    "description": "Comprehensive server activity logging",
+    "features": [
+      "Message logging",
+      "Member join/leave logs",
+      "Channel activity logs",
+      "Moderation logs",
+      "Custom log channels"
+    ],
+    "complexity": "medium",
+    "estimated_time": "1.5 hours"
+  },
+  "games": {
+    "name": "Game System",
+    "description": "Fun games and entertainment features",
+    "features": [
+      "Trivia games",
+      "Word games",
+      "Mini-games",
+      "Leaderboards",
+      "Game rewards"
+    ],
+    "complexity": "hard",
+    "estimated_time": "2.5 hours"
+  },
+  "music": {
+    "name": "Music System",
+    "description": "Music playback and queue management",
+    "features": [
+      "YouTube/SoundCloud integration",
+      "Music queue",
+      "Playlist support",
+      "Volume control",
+      "Music commands"
+    ],
+    "complexity": "hard",
+    "estimated_time": "3 hours"
+  },
+  "economy": {
+    "name": "Economy System",
+    "description": "Virtual currency and economy features",
+    "features": [
+      "Virtual currency",
+      "Daily rewards",
+      "Shop system",
+      "Gambling games",
+      "Economy leaderboards"
+    ],
+    "complexity": "hard",
+    "estimated_time": "2.5 hours"
+  }
+}
