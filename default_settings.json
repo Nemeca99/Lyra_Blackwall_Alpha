@@ -1,0 +1,34 @@
+{
+  "privacy": {
+    "allow_memory_storage": true,
+    "allow_analytics": true,
+    "share_feedback_anonymously": false
+  },
+  "notifications": {
+    "enable_notifications": true,
+    "notify_on_updates": true,
+    "notify_on_features": true,
+    "quiet_mode": false
+  },
+  "interaction": {
+    "response_length": "normal",
+    "personality_mode": "balanced",
+    "auto_respond": true,
+    "use_emojis": true
+  },
+  "memory": {
+    "memory_retention_days": 30,
+    "auto_cleanup_old_memories": true,
+    "memory_priority": "normal"
+  },
+  "channels": {
+    "preferred_channels": [],
+    "ignore_channels": [],
+    "auto_monitor_channels": true
+  },
+  "custom": {
+    "timezone": "UTC",
+    "language": "en",
+    "theme_preference": "auto"
+  }
+}
